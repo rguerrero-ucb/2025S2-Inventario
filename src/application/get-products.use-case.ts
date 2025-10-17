@@ -7,6 +7,7 @@ export class GetProductsUseCase {
   ) {}
 
   async execute(): Promise<Producto[]> {
+
     return this.productoRepository.findAll();
   }
 }

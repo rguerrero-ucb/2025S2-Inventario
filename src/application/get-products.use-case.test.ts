@@ -23,11 +23,15 @@ describe('GetProductsUseCase', () => {
     const mockProducts: Producto[] = [{ id: 1, nombre: 'Laptop', clase: 'Computadora', codigo: '12345' }];
     mockProductoRepository.findAll.mockResolvedValue(mockProducts);
 
+
     // 2. Act: Ejecutamos el método a probar
     const result = await getProductsUseCase.execute();
 
     // 3. Assert: Verificación de resultados
     expect(result).toEqual(mockProducts);
     expect(mockProductoRepository.findAll).toHaveBeenCalledTimes(1);
+
+
+
   });
 });

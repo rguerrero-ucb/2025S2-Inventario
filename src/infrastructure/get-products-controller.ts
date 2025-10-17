@@ -3,6 +3,7 @@ export class GetProductsController {
 
   async getAllProducts( req: any, res: any ) {
     try {
+
       const productos = await this.getProducts.execute();
       res.json( productos );
     } catch ( error ) {

@@ -10,6 +10,7 @@ async function main() {
   try {
     // 2. Ejecutar el caso de uso
     const productos = await getProducts.execute();
+
     console.log( 'Productos encontrados:', productos );
   } catch ( error ) {
     console.error( 'Ocurrió un error en la aplicación:', error );
